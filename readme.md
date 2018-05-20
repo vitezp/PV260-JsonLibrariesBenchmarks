@@ -13,3 +13,27 @@ Steps:
 [ ] 	d. Write powershell and FAKE or CAKE build script, copy HTML reports from build folder to artifact folder.
 
 Feel free to refactor code, add meaningful metrics or benchmarks. Be creative.
+
+Results:
+                                  Method |     Mean |     Error |    StdDev |   Median | Scaled | Rank |
+---------------------------------------- |---------:|----------:|----------:|---------:|-------:|-----:|
+        NewtonsoftJsonPerson_Deserialize | 2.737 ms | 0.0539 ms | 0.0773 ms | 2.718 ms |   1.00 |    1 |
+                                         |          |           |           |          |        |      |
+              NewtonsoftJson_Deserialize | 1.837 ms | 0.0420 ms | 0.1224 ms | 1.796 ms |   1.00 |    1 |
+                                         |          |           |           |          |        |      |
+      NewtonsoftJson_Streams_Deserialize | 3.494 ms | 0.0690 ms | 0.1879 ms | 3.453 ms |   1.00 |    1 |
+                                         |          |           |           |          |        |      |
+ JsonSerializer_DataContract_Deserialize | 6.835 ms | 0.1345 ms | 0.2748 ms | 6.790 ms |   1.00 |    1 |
+
+                           
+    						   Method |       Mean |    Error |    StdDev | Scaled | Rank |
+------------------------------------- |-----------:|---------:|----------:|-------:|-----:|
+             NewtonsoftJson_Serialize |   648.2 ns | 13.04 ns |  35.49 ns |   1.00 |    1 |
+                                      |            |          |           |        |      |
+       NewtonsoftJsonPerson_Serialize |   519.1 ns | 10.72 ns |  31.09 ns |   1.00 |    1 |
+                                      |            |          |           |        |      |
+ DataContractJsonSerializer_Serialize | 1,074.5 ns | 21.49 ns |  60.96 ns |   1.00 |    1 |
+                                      |            |          |           |        |      |
+       JavaScriptSerializer_Serialize | 2,426.2 ns | 48.44 ns | 111.29 ns |   1.00 |    1 |
+	   
+	   
