@@ -1,4 +1,4 @@
-﻿Your task is to write benchmarks for JSON serializers/deserializers.
+Your task is to write benchmarks for JSON serializers/deserializers.
 
 Steps:
 [x] 1. Try to run test and get familiar with benchmark framework.

@@ -6,11 +6,14 @@ namespace JsonBenchmark
     public abstract class JsonBenchmarkBase
     {
         private const string TestFilesFolder = "TestFiles";
-        protected string JsonSampleString;
+        protected string JsonChuckNorrisString;
+        protected string JsonPersonString;
 
         protected JsonBenchmarkBase()
         {
-            JsonSampleString = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, TestFilesFolder, "chucknorris.json"));
+            JsonChuckNorrisString = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, TestFilesFolder, "chucknorris.json"));
+            JsonPersonString = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, TestFilesFolder, "persondata.json"));
+
         }
     }
 }
